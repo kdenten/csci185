@@ -1,0 +1,25 @@
+
+
+
+
+img {
+    width: 200px;
+}
+
+nav {
+    border: solid 1px black
+}
+
+header, footer {
+    background-color: #bf9aa2;
+}
+
+section {
+    width: 400px;
+    display: inline-block;
+    border: solid 1px black
+}
+
+#Section2 {
+    background-color: hotpink;
+}
