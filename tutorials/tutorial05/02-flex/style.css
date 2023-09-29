@@ -1,0 +1,55 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    box-sizing: border-box;
+    
+}
+
+body {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+#home {
+    background-color: lightsteelblue;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#bio {
+    background-color:rgb(79, 79, 226);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#portfolio {
+    background-color:rgb(18, 18, 141);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#contact {
+    background-color:rgb(11, 11, 36);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
