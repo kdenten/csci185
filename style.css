@@ -4,8 +4,12 @@
 }
 
 body {
+    background-color: #4c0827;
+    color: #e8e8e8;
     margin: 0px;
     font-family: Arial, sans-serif;
+   
+    
 }
 
 p, a, li {
