@@ -4,22 +4,21 @@ function setup() {
     const canvasWidth = canvasEl.offsetWidth;
     const canvasHeight = canvasEl.offsetHeight; 
     const myCanvas = createCanvas(canvasWidth, canvasHeight);
+    
     myCanvas.parent("canvas-holder");
     background('#FFF');
 }
 
 function mouseDragged(){
-    // Your job:
-    // When the user drags the mouse on the canvas, you should honor
-    // the color, shape, and size of the paintbrush that are selected
-    // in the right-hand panel. Replace the code below with something
-    // smarter:
     const color = document.querySelector("#color").value;
-    fill(color);
     const size = document.querySelector("#size").value;
     const shape = document.querySelector("#shape").value;
-
-
+    const outlineWidth = document.querySelector("#outlineWidth").value;
+    const outlineColor = document.querySelector("#outlineColor").value;
+    
+    fill(color);
+    stroke(outlineColor);
+    strokeWeight(outlineWidth);
 
     if (shape === "circle") {
         circle(mouseX, mouseY, size); 
