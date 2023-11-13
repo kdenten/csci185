@@ -21,6 +21,7 @@ function showImage() {
     console.log('Show image');
     const img = document.querySelector(".current-photo img");
     img.src = photos[idx];
+    document.querySelector(".caption").innerHTML = "Image "+(idx+1)+" of 10"
 }
 
 
@@ -33,8 +34,12 @@ function showImage() {
 function forward() {
     console.log('forward');
     idx += 1;
+    if (idx > photos.length-1) {
+    idx = 0; }
     showImage();
 }
+
+
 
 
 /* This function should set the idx variable 
@@ -45,4 +50,8 @@ function forward() {
 */
 function back() {
     console.log('back');
+    idx -= 1;
+    if (idx < 0) {
+        idx = photos.length-1; }
+        showImage();
 }
