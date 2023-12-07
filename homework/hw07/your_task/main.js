@@ -56,6 +56,30 @@ async function getTracks (term) {
 }
 
 async function getAlbums (term) {
+    const url = `https://www.apitutor.org/spotify/simple/v1/search?type=album&q=${term}`;
+    const response = await fetch(url);
+    const albumData = await response.json();
+    document.querySelector('#albums').innerHTML = ""
+    
+
+    for (let i = 0; i < 10; i++) { 
+    const album = albumData[i];
+
+    const template = 
+        `<section class="album-card" id="${album.id}">
+        <div>
+            <img src="${album.image_url}">
+             <h2>${album.name}</h2> 
+            <div class="footer">
+                <a href="${album.spotify_url}" target="_blank">
+                    view on spotify
+                </a>
+            </div>
+        </div>
+        </section>  `;
+
+        document.querySelector('#albums').innerHTML += template;
+    }
     
 }
 
